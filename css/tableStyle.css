@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+header {
+  height: 14vh;
+  background-image:url('https://68.media.tumblr.com/51294797dfd8df08a398f50ee4cc5a3a/tumblr_omkgxeBzfm1qjqi9so1_540.png');
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+
+main {
+  padding: 2em;
+  height: 86vh;
+  background-image: url(http://www.mannington.com/-/media/Images/Product/Hardwood/HandCrafted/MVH05AC1_Mountain_View_Acorn.jpg);
+  background-size: 100px;
+}
+
+.table {
+  background: radial-gradient(ellipse at center, #37a52b 0%, #006e2e 100%);
+  border: 30px solid #6c350f;
+  margin: 0 auto;
+  position: relative;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+.hand,
+.pot {
+  border: 1px solid red;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pot {
+  margin-top: 350px;
+}
+
+
+.table > .player {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px;
+  background-color: lightgrey;
+  border: 2px solid black;
+}
+.table > .player .name,
+.table > .player .stack {
+  padding: .2em .8em;
+  text-align: center;
+}
+.table > .player .name {
+  background-color: black;
+  color: white;
+}
+
+.table > .player.player1 {
+  transform: rotate(100deg) translate(195px) rotate(-100deg);
+}
+
+.table > .player.player2 {
+   transform: rotate(-100deg) translate(320px) rotate(100deg);
+}
+
+
+.btn-actions {
+  position: absolute;
+  right: 20em;
+  bottom: 5em;
+}
+.btn-actions .btn {
+  padding: .5em 1em;
+  border-radius: 0;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  font-size: 16px;
+}
+.btn-actions input {
+  display: block;
+  margin-top: 6px;
+  height: 30px;
+  font-size: 16px;
+}
+
+#foldButton {
+  background-color: grey;
+}
+#foldButton:hover {
+  background-color: silver;
+}
+
+#callButton {
+  background-color: MediumSeaGreen;
+}
+#callButton:hover {
+  background-color: #94dbb3;
+}
+
+#betButton {
+  background-color: red;
+}
+#betButton:hover {
+  background-color: #ff8080;
+}
+
+#checkButton {
+  background-color: DodgerBlue;
+}
+#checkButton:hover {
+  background-color: #9ecfff;
+}
+
+.timer{
+  position: absolute;
+  left: 10em;
+  bottom: 20em;
+}
+
+#poker_play_pause,
+#poker_next_round
+{
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  width: 100px;
+}
+
+#poker_play_pause span,
+#poker_next_round span
+{
+  color: #fff;
+  display: block;
+  font-family: georgia;
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+
+#poker_play_pause a,
+#poker_next_round a
+{
+  color: #fff;
+  display: block;
+  font-family: georgia;
+  font-size: 40px;
+  height: 50px;
+  line-height: 30px;
+  text-decoration: none;
+  width: 50px;
+}
+
+#poker_play_pause
+{
+  margin-left: 100px;
+}
+
+#poker_play_pause a
+{
+  background: red;
+  border: 10px dotted #fff;
+  border-radius: 50px;
+}
+
+#poker_play_pause .play span
+{
+  border-color: transparent transparent transparent white;
+  border-style: solid;
+  border-width: 15px;
+  display: block;
+  height: 0px;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -15px;
+  position: relative;
+  top: 50%;
+  width: 0px;
+}
+
+#poker_play_pause .pause
+{
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#poker_play_pause .pause span:before
+{
+  content: "=";
+  font-size: 50px;
+  position: relative;
+  bottom: 2px;
+}
+
+#poker_next_round
+{
+  margin-left: 250px;
+}
+
+#poker_next_round a
+{
+  background: #333;
+  border: 10px dotted #fff;
+  border-radius: 50px;
+}
+
+.clock
+{
+  color: #f3fc3f;
+  font-family: georgia;
+  font-size: 30px;
+  margin-top: -20px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 1) 0px 2px 2px;
+}
+
+#poker_blinds
+{
+  text-align: center;
+}
+
+.blinds
+{
+  text-align: center;
+}
+
+.blinds span
+{
+  color: #f3fc3f;
+  font-family: georgia;
+  font-size: 30px;
+  text-shadow: rgba(0, 0, 0, 1) 0px 2px 2px;
+}
+
+#poker_blinds > span
+{
+  color: #fff;
+  display: block;
+  font-family: georgia;
+  font-size: 30px;
+  margin-top: 10px;
+  text-shadow: rgba(0, 0, 0, 1) 0px 1px 2px;
+}
+
+.settings,
+.reset
+{
+  color: #fff;
+  display: block;
+  font-family: georgia;
+  font-size: 30px;
+  height: 40px;
+  margin: 20px;
+  opacity: 0.35;
+  text-shadow: rgba(0, 0, 0, 1) 0px -1px 1px;
+  text-decoration: none;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.settings:hover,
+.reset:hover
+{
+  opacity: 1;
+}
+
+.settings
+{
+  float: left;
+}
+
+.reset
+{
+  float: right;
+}
+
+audio
+{
+  display: none;
+}
+
+/* clearfix */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+#round
+{
+  color: #fff;
+  font-family: georgia;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 120px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 1) 0px 1px 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
